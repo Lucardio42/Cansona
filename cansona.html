@@ -1,0 +1,146 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para usted cansona</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fce4ec;
+    }
+    .screen {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      /* CAMBIO: min-height en lugar de height fijo para que el texto largo no se corte */
+      min-height: 100vh; 
+      text-align: center;
+      padding: 20px 0; /* Espacio arriba y abajo */
+    }
+    .active {
+      display: flex;
+    }
+    .password-screen {
+      flex-direction: column;
+      height: 100vh; /* La pantalla de bloqueo sí se queda fija */
+    }
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 60px);
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .key {
+      background-color: #f8bbd0;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      padding: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .key:hover {
+      background-color: #f48fb1;
+    }
+    .input-display {
+      font-size: 24px;
+      margin-top: 20px;
+      letter-spacing: 8px;
+    }
+    .notepad {
+      background-color: #fff0f6;
+      border: 3px solid #f8bbd0;
+      padding: 30px; /* Más espacio interno */
+      border-radius: 20px;
+      width: 90%;
+      max-width: 600px; /* Un poco más ancho */
+      text-align: left;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      line-height: 1.8;
+      font-size: 18px; /* Texto más grande */
+      margin: 20px;   /* Margen para que no toque los bordes del celular */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .notepad h3 {
+      margin-top: 0;
+      color: #ad1457;
+    }
+    .notepad h4 {
+      color: #d81b60;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+<div id="passwordScreen" class="screen password-screen active">
+  <h2>🔒 Enter password</h2>
+  <div class="input-display" id="inputDisplay">••••••</div>
+  <div class="keypad">
+    <button class="key" onclick="enterDigit('1')">1</button>
+    <button class="key" onclick="enterDigit('2')">2</button>
+    <button class="key" onclick="enterDigit('3')">3</button>
+    <button class="key" onclick="enterDigit('4')">4</button>
+    <button class="key" onclick="enterDigit('5')">5</button>
+    <button class="key" onclick="enterDigit('6')">6</button>
+    <button class="key" onclick="enterDigit('7')">7</button>
+    <button class="key" onclick="enterDigit('8')">8</button>
+    <button class="key" onclick="enterDigit('9')">9</button>
+    <div></div>
+    <button class="key" onclick="enterDigit('0')">0</button>
+    <div></div>
+  </div>
+</div>
+<div id="notepadScreen" class="screen">
+  <div class="notepad">
+    <h3>📅 31 Marzo 2026 </h3>
+    <h4>💌 Mi Odiada Bayoleth</h4>
+    <p>
+      Quiero que sepa mi sowi lo feliz que soy por tenerla en mi vida así no sea como quisiera. Desde que llegó, todo cambió para mejor.
+      Actualmente aunque sea difícil nuestra situación, y la tenga irritada con todo esto, por mi parte quisiera seguir enamorándola todos los días, me vi y me veo haciendo una vida con usted y desearía que usted fuera mi último mi amor.
+    </p>
+    <p>
+      Me duele pasar todo esto, porque al menos por mi parte la conexión que sentí fue algo real, no sé que tan claro lo tenga pero siempre la he amado, a su lado aprendí lo que es el amor verdadero, nunca quise que nuestro vínculo se acabara de esa forma, y agradezco infinitamente lo que me enseñó y la compañía que me briindó y me brinda
+      el encajar con usted desde un inicio fue algo que siempre se me quedará en mi cabeza, no sé como darle las gracias o como desmotrarle lo agradecido que estoy con usted, la vida nos queda injusta pero todo tiene un porqué, nuestro viaje juntos nos llevó lejos y anhelo con mi alma que siguiera, me duele tanto el cierre y ese vacío
+      no me es fácil decir adiós a la persona que quería que permaneciera conmigo el resto de mi vida. Me encantaría pedirte que no te olvides de mí porque yo nunca lo haré de ti, amé y amo cada cada mirada con tus ojos tan divinos, cada beso, cada risa, cada acaricia, cada llamada, tu forma de ser, amé todo de ti y tus defectos.
+    </p>
+    <p>
+      Todo lo que he vivido contigo me ha hecho escribir esto, me duele todo pero la sigo amando, y lo difícil que es, tengo mucha fé de que, solo es una etapa, y poder reencontrarnos y hacer nuestra familia y casarnos, y aunque ahorita nos toque actuar de cierta forma, soy feliz de simplemente tenerla, aunque no sea conmigo.
+      Mi pinky promess con candadito de no dejarte sola permancerá eternamente, esto es para desahogarme y decirle lo mucho que me importa, te amo y te amaré de la forma mas sincera posible, y aunque hayamos tenido tantos errores aprenddimos de ellos, y ver como mejoramos me pone tan feliz, tendrás un espacio en mi vida y mi corazon que nadie mas tendrá, Dios te bendiga mi amor, seguiré disfrutando el tiempo que nos queda, solo quiero que el día que tengamos que alejarnos no sea una despedida definitiva :c
+    </p>
+    <p>
+      Te amo profundamente, amarte con tanta intensidad será algo de lo que nunca me arrepentiré, y que todos hayan sabido el como te amo tampoco será de algo que arrepentirme, tuve mis errores pero siempre quise mejorar por ti, espero haberte hecho sentir amada como nadie lo ha hecho, no sé como mas decirte el como te amo, y si por planes de Dios no podemos seguir juntos, deseo que cumplas tus sueños, de ser azafata de que conozcas el mundo y hagas tu familia, siempre me hiciste sentir orgulloso por la gran mujer que eres, y a pesar de todos tus errores eso no te hacen menos, Dios te guie te dé fuerzas y le agradezco con mi corazon a él de permitirme conocerte, te apoyaré en tus éxitos. 
+      Te amo como un hipopotamo gigante y un elefante panzon, siempre serás mi niña chiquita de ojos lindos, solo quiero que nadie apague ese brillo que tienen, la amo sowi siempre cuente conmigo, la cielo ♡
+    </p>
+  </div>
+</div>
+<script>
+  const correctPassword = '150923';
+  let input = '';
+  function enterDigit(digit) {
+    if (input.length < 6) {
+      input += digit;
+    }
+    const display = document.getElementById('inputDisplay');
+    display.textContent = input.padEnd(6, '•');
+    if (input.length === 6) {
+      if (input === correctPassword) {
+        document.getElementById('passwordScreen').classList.remove('active');
+        document.getElementById('notepadScreen').classList.add('active');
+        // Al entrar, aseguramos que la página empiece desde arriba
+        window.scrollTo(0, 0);
+      } else {
+        alert('Contraseña incorecta, intenta de nuevo');
+        input = '';
+        display.textContent = '••••••';
+      }
+    }
+  }
+</script>
+</body>
+</html>
